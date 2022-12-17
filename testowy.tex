@@ -1,0 +1,57 @@
+\chapter{Wstęp}
+Anomalią ruchu sieciowego nazywamy każde odstępstwo od wcześniej obserwowanego wzorca przepływu danych w sieci komputerowej. Wykrywanie takich zjawisk może być wykorzystane m.in. w procesie zabezpieczania sieci (systemy wykrywania intruzów) lub w systemach wykrywania/zapobiegania awariom \oth{network failure}. Niezależnie od tego, czy ruch sieciowy rozpatrujemy jako pewną ilość przepływów  \oth{flows} czy też analizujemy przesyłanie poszczególnych jednostek transmisyjnych, rozmiar danych analizowanych jest zawsze olbrzymi. Dodatkowo wykrywanie anomalii jest z samego założenia procesem, który powinien być realizowany w czasie pracy sieci, co z kolei stawia określone wymagania dotyczące szybkości przetwarzania. Uzasadnione zatem wydaje się podejście oparte na analizie danych agregowanych. Stosowanie metod statystycznych w procesie analizy utrudnia ich interpretację w odniesieniu do realnych zdarzeń w sieci komputerowej. Wykrywanie anomalii ruchu sieciowego jest jednym ze sposobów identyfikacji naruszeń bezpieczeństwa sieci komputerowej oraz wykrywania uszkodzeń sieci. 
+
+\textbf{Celem pracy} jest analiza dynamiki protokołu komunikacyjnego ARP w lokalnej sieci Ethernet\dots
+
+Praca podzielona jest na pięć rozdziałów. W rozdziale drugim przedstawiono przegląd literatury dotyczący metod badań sieci komputerowych. W rozdziale 3  W rozdziale czwartym przedstawiono wyniki analizy zmian w czasie ilości ramek ARP rejestrowanych w jednominutowych przedziałach czasu. Badania przeprowadzono w małej akademickiej sieci komputerowej składającej się z 42 komputerów. 
+
+\lstinputlisting[basicstyle=\footnotesize, caption={[Tom Torfs - tomtorfs.c]Zwycięzca 14th International Obfuscated C Code Contest w kategorii Best Self-Documenting - Tom Torfs}, label=tomtorfs]{listings/tomtorfs.c}
+
+
+\chapter{Metody badania sieci komputerowych}
+Analiza ruchu sieciowego to proces pozwalający na pozyskiwanie wiedzy dotyczącej pracy sieci komputerowej. Wiedza ta może zostać wykorzystana do usprawnienia zarządzania siecią (wykrywania uszkodzeń, błędnej konfiguracji itp.) \cite{NagraTC02} 
+lub do wykrywania naruszeń bezpieczeństwa sieciowego \cite{iso9126} . Zakłócenia normalnego funkcjonowania sieci nazywa się anomaliami sieciowymi. Wykrywanie takich anomalii jest jednocześnie kluczem do wykrywania uszkodzeń lub ataków sieciowych \cite{NagraTC02}. 
+Badanie ruchu sieciowego wymaga skonstruowania modeli takiej aktywności [10,11] oraz opracowania metod analizy zebranych danych. Można wyróżnić przynajmniej dwie grupy technik analizy ruchu sieciowego. Jedną z nich jest wnikliwa analiza pakietów (deep packet inspection) [21] wykorzystywana np. w przełącznikach aplikacyjnych (tzw. content switch). Drugą grupą technik są analizy ruchu zagregowanego \cite{iso9126,NagraTC02}.
+
+
+\chapter{ARP}
+Badania dynamiki zmian w czasie ilości ramek ARP przeprowadzono w małej lokalnej sieci komputerowej składającej się z 42 urządzeń. W sieci znajdowały się:
+\begin{itemize}
+    \item przełącznik (Allied Telesyn) pracujący jako brama internetowa, 
+    \item router (Cisco),
+    \item trzy serwery (dwa Windows i GNU/Linux),
+    \item komputery pracowników naukowych głównie z systemem Windows.
+\end{itemize}
+Analizowano szeregi minutowych ilości ramek ARP. Analizowano szeregi zawierające ramki odnoszące się do pięciu najbardziej aktywnych urządzeń. Wykaz badanych urządzeń pokazano w Tabeli~\ref{tab:Wbu}.
+
+\begin{table}[t]
+\centering
+\begin{tabular}{|c|c|}
+\cline{1-2}
+Nazwa urządzenia & Typ\\
+\cline{1-2}
+dev0	& przełącznik (Allied Telesyn)\\\cline{1-2}
+dev1	& router (Cisco)\\\cline{1-2}
+dev2	& serwer Windows\\\cline{1-2}
+dev3	& serwer GNU/Linux\\\cline{1-2}
+dev4	& komputer pracownika naukowego\\\cline{1-2}
+\end{tabular}
+\caption{Wykaz badanych urządzeń}
+\label{tab:Wbu}
+\end{table}
+
+\section{Metody analizy}
+Wykresy rekurencyjne wykorzystywane są do oceny stopnia aperiodyczności układów nieliniowych. Pomocne są również w analizie wielowymiarowej przestrzeni fazowej w której zrekonstruowany jest atraktor. Wykres rekurencyjny jest zawsze dwuwymiarowy mimo, że może reprezentować zachowanie układu wielowymiarowego. Wykres rekurencyjny opisany jest zależnością:
+
+\begin{equation}
+    R_{i,j}= H(\varepsilon_i-\|x_i-x_j)
+\end{equation}
+
+\begin{defi}
+$P\stackrel{\tau}{\rightarrow}P'$ definicja ...:
+\begin{list}{}{}
+    \item[a)] a.
+    \item[b)] i b.
+\end{list}
+\label{nazwa}
+\end{defi}

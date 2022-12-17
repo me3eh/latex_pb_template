@@ -1,0 +1,63 @@
+\documentclass[oneside,12pt]{wipb}
+\usetikzlibrary{mindmap,trees}%dla diagramu Computer science mindmap
+
+
+\katedra{Systemów Czasu Rzeczywistego}
+\typpracy{ %magisterska
+           inżynierska
+         }
+\temat{Opis użycia klasy wipb}
+\autor{Gal Anonim}
+\promotor{Juliusz Cezar}
+\indeks{123456}
+\studia{stacjonarne
+        %niestacjonarne
+       }
+\rokakademicki{2008/2009}
+\profil{magisterskie jednolite
+        %magisterskie uzupe³niaj¹ce
+        %studia I stopnia
+        %studia II stopnia
+}
+\kierunekstudiow{informatyka
+                 %matematyka
+                }
+\specjalnosc{ -
+%Inżynieria Oprogramowania
+             %Inżynieria Komputerowa
+             %Systemy Oprogramowania
+             %Metody infnformatyczne w~banknkowoci i~finansach
+             %Ochrona systemów informatycznych
+            }
+\zakres{1. zakres I \newline 2. zakres II \newline 3. zakres III}
+
+\hypersetup{ %wpisy w pdf info
+pdfauthor={mgr inż. Maciej Brzozowski},
+pdftitle={Opis użycia klasy wipb},
+pdfsubject={},
+pdfkeywords={Praca dyplomowa},
+pdfpagemode=UseNone,
+linkcolor=black,
+citecolor=black
+} 
+
+\begin{document}
+\maketitle
+\tableofcontents
+\thispagestyle{empty}
+\setcounter{page}{0}
+\pagestyle{plain}
+\input{testowy}
+\input{rozdziali.tex}
+\input{rozdzialiii.tex} % praca moze byc podzielona na pliki
+%\input{rozdzialii.tex}
+
+\nocite{*} %wszystkie wpisy w bibliografi
+\bibliographystyle{unsrt} %{latex8} posortowane wzgledem wystepowania
+\bibliography{bibliografia}%
+
+
+
+
+%\biblioteka{tak} % tak/nie
+\end{document}
